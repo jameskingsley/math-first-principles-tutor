@@ -49,8 +49,8 @@ with st.sidebar:
     - Math: SymPy
     """)
     st.divider()
-    st.write("Instructor: James Kingsley Philip")
-    st.write("Location: Enugu, Nigeria")
+    st.write("Developer: James Kingsley ")
+    st.write("Location: Nigeria")
 
 # User Input
 problem = st.text_area(
@@ -66,7 +66,7 @@ if st.button("Solve & Verify"):
             try:
                 # Send request to FastAPI backend
                 response = requests.post(
-                    "http://localhost:8000/solve", 
+                    "https://math-first-principles-tutor.onrender.com/solve", 
                     json={"problem": problem}
                 )
                 
